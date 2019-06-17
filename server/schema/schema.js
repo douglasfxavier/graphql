@@ -57,7 +57,7 @@ const queryType = new GraphQLObjectType({
                 return {texto: "Hello World"};
             }
         },
-        todasPessoas: {
+        pessoas: {
             type: new GraphQLList(pessoaType),
             resolve(){
                 return pessoas;
@@ -88,7 +88,6 @@ const queryType = new GraphQLObjectType({
 module.exports = new GraphQLSchema({
     query:queryType
 })
-
 
 const pessoas = [
     {
